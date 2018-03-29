@@ -19,4 +19,9 @@ public final class BagController {
     public void addThing(@RequestBody final String something) {
         bag.add(something);
     }
+
+    @DeleteMapping
+    public void removeEverything() {
+        bag.removeEverything();
+    }
 }

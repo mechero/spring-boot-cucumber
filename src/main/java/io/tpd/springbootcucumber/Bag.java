@@ -14,8 +14,15 @@ public final class Bag {
         things.add(something);
     }
 
-    // Needed for the JSON serializer
     public ArrayList<String> getThings() {
         return things;
+    }
+
+    public boolean isEmpty() {
+        return things.isEmpty();
+    }
+
+    public void removeEverything() {
+        things.clear();
     }
 }
