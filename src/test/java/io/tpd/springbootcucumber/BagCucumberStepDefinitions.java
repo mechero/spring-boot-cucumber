@@ -3,6 +3,7 @@ package io.tpd.springbootcucumber;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Ignore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Ignore
 public class BagCucumberStepDefinitions extends SpringBootBaseIntegrationTest {
 
     private final Logger log = LoggerFactory.getLogger(BagCucumberStepDefinitions.class);
