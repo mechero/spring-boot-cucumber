@@ -1,0 +1,11 @@
+package io.tpd.springbootcucumber.bagextra;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "src/test/resources/features/bag-more.feature", plugin = {"pretty", "html:target/cucumber"},
+        extraGlue = "io.tpd.springbootcucumber.bagcommons")
+public class BagExtraCucumberIntegrationTest {
+}
