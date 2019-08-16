@@ -1,6 +1,5 @@
 package io.tpd.springbootcucumber.bagbasics;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.tpd.springbootcucumber.bagcommons.BagHttpClient;
@@ -23,12 +22,6 @@ public class BagCucumberStepDefinitions {
 
     @Autowired
     private BagHttpClient bagHttpClient;
-
-    @Given("^the bag is empty$")
-    public void the_bag_is_empty() {
-        bagHttpClient.clean();
-        assertThat(bagHttpClient.getContents().isEmpty()).isTrue();
-    }
 
     @When("^I put (\\d+) (\\w+) in the bag$")
     public void i_put_something_in_the_bag(final int quantity, final String something) {
