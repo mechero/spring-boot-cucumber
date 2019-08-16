@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BagCommonsCucumberStepDefinitions {
+public class BagCommonCucumberStepDefinitions {
 
     @Autowired
     private BagHttpClient bagHttpClient;
