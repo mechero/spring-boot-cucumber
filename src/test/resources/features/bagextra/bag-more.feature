@@ -1,4 +1,4 @@
-Feature: Bag functionalities
+Feature: Bag more functionalities
 
   Scenario: Putting one thing in the bag
     Given the bag is not empty
