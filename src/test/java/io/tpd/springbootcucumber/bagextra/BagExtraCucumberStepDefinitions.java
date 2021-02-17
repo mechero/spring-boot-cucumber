@@ -4,11 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.tpd.springbootcucumber.bagcommons.BagHttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class BagExtraCucumberStepDefinitions {
 
     @Autowired
