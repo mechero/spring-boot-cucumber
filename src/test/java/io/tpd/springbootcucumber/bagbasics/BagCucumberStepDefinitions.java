@@ -6,7 +6,6 @@ import io.tpd.springbootcucumber.bagcommons.BagHttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 
 import java.util.Collections;
@@ -15,7 +14,6 @@ import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class BagCucumberStepDefinitions {
 
     private final Logger log = LoggerFactory.getLogger(BagCucumberStepDefinitions.class);
