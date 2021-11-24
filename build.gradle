@@ -1,0 +1,42 @@
+
+
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id "org.sonarqube" version "2.7"
+    id 'java'
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply from: 'gradle.properties'
+
+group = 'com.jos.dem.springboot.cucumber'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 11
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-webflux')
+    implementation('org.springframework.boot:spring-boot-starter-tomcat')
+    compileOnly('org.projectlombok:lombok')
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation('org.apache.commons:commons-lang3:3.8.1')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('io.projectreactor:reactor-test')
+
+    testImplementation("io.cucumber:cucumber-java:$cucumberVersion")
+    testImplementation("io.cucumber:cucumber-junit:$cucumberVersion")
+    testImplementation("io.cucumber:cucumber-spring:$cucumberVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+}
